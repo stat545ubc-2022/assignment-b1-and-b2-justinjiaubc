@@ -14,8 +14,9 @@ suppressPackageStartupMessages(library(digest))
 suppressPackageStartupMessages(library(datateachr))
 ```
 
-exercise1&2
+## exercise1&2
 
+```{r}
 #' Basic data cleaning
 #' @details this function deletes omitted observations and keeps observations above a threshold (for example: you can use 0 as the threshold and keep positive observations). 
 #'
@@ -27,8 +28,6 @@ exercise1&2
 #'
 #' @return returns a cleaned dataset
 
-
-```{r}
 cleanr<-function(data,x,n){
   stopifnot(is.data.frame(data))
   if(!is.numeric(x)) {
@@ -42,7 +41,7 @@ cleanr<-function(data,x,n){
 }
 ```
 
-exercise3
+## exercise3
 In this example, I use building permits dataset and keep the positive project value.
 ```{r}
 cleanr(building_permits,building_permits$project_value,0)
@@ -59,9 +58,9 @@ cleanr(building_permits,building_permits$type_of_work,0)
 ```
 
 
-exercise4
+## exercise4
 
-building_permits$project_value has NA's, building_permits$type_or_work is a character vector, and cancer_sample$radius_mean has non NA's
+In building_permits dataset, project_value is a numeric vector and has NA's, type_or_work is a character vector. In cancer_sample dataset, radius_mean has non NA's
 
 ```{r}
 data1<-building_permits%>%
