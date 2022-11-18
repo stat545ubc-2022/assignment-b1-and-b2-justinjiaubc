@@ -1,0 +1,3 @@
+weiteLines(readlines("LICENSE"))
+YEAR: 2022
+COPYRIGHT HOLDER: apackage authors
