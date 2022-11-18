@@ -1,1 +1,0 @@
-This repository contains a function for basic data cleaning. This function deletes omitted observations and keeps observations above a threshold (for example: you can use 0 as the threshold and keep positive observations).
